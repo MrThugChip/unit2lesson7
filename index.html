@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery Testing Zone</title>
+        
+        <style>
+            div {
+                
+                padding: 10px;
+                width: 100px;
+                height: 100px;
+                position:relative;
+            }
+            
+            #box1 {
+                color:darkred;
+                background-color:chocolate;
+                   
+            }
+            
+            #box2 {
+                
+                color:blue;
+                background-color:black;
+                
+            }
+
+        </style>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    </head>
+    <body>
+        
+        <button>Click me for a disappearing act.</button>
+        <button id="clicker">Click me for YOUR first animations.</button>
+        <p>This paragraph will vanish!</p>
+        <script>
+            $(document).ready(function(){
+                $("button").click(function(){
+                    $("p").hide();
+                    $("#box1").animate({
+                        left:'200px',
+                        opacity:'.5'
+                    }, "slow");
+                    
+                    //Animate the second box, following the above format
+
+                });
+        
+                $("#clicker").click(function(){
+                    //Use the animate function as above to make this second button do things!
+                
+                
+                }, "fast");
+                
+                
+                
+            });
+            
+        </script>
+        
+        <div id="box1">
+            See if you can use jQuery to make just this box disappear!
+        </div>
+        <div id="box2">
+            This is another box. See if you can use jQuery to animate just this box.
+            
+        </div>
+    </body>
+</html>
